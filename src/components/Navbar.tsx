@@ -12,7 +12,6 @@ const NAV_ITEMS = [
   { label: 'Autoexame', href: '#autoexame' },
   { label: 'Mito ou Verdade', href: '#mitos' },
   { label: 'Especialistas', href: '#especialistas' },
-  { label: 'Alunas', href: '#campanha' },
 ];
 
 export const Navbar: React.FC = () => {

@@ -61,11 +61,6 @@ export const Footer: React.FC = () => {
                   Vozes & Especialistas
                 </a>
               </li>
-              <li>
-                <a href="#campanha" className="hover:text-white transition-colors">
-                  Alunas & Grupos de Trabalho
-                </a>
-              </li>
             </ul>
           </div>
 

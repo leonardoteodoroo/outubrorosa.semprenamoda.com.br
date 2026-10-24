@@ -121,7 +121,7 @@ export const HeroSection: React.FC = () => {
                 className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 sm:py-3.5 rounded-2xl bg-white/90 hover:bg-rose-50 text-zinc-800 border border-rose-200/80 font-semibold text-xs sm:text-sm transition-colors shadow-2xs"
               >
                 <Stethoscope size={17} weight="duotone" className="text-rose-700 shrink-0" />
-                <span>Especialistas & Alunas</span>
+                <span>Vozes & Especialistas</span>
               </motion.a>
             </motion.div>
 
