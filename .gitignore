@@ -1,0 +1,9 @@
+node_modules/
+dist/
+tsconfig.tsbuildinfo
+.DS_Store
+/referencia-cps/
+/referencia-cps.zip
+/*.docx
+/*.pdf
+/*.jpeg
