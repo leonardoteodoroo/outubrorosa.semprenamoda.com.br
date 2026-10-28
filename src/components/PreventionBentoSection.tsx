@@ -247,11 +247,11 @@ export const PreventionBentoSection: React.FC = () => {
                       40 a 49 anos
                     </span>
                     <span className="text-[10px] sm:text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white text-pink-700 border border-pink-200">
-                      Acesso Garantido
+                      Acesso Garantido no SUS
                     </span>
                   </div>
                   <p className="mt-1.5 text-xs text-zinc-700 leading-relaxed">
-                    Realização preventiva mesmo sem sintomas, mediante decisão
+                    Acesso garantido pelo SUS mesmo sem sintomas, mediante decisão
                     conjunta entre a mulher e o profissional de saúde.
                   </p>
                 </div>

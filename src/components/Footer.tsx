@@ -79,13 +79,22 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-pink-100/90">
-          <p className="flex items-center gap-1.5">
+          <p className="flex items-center gap-1.5 text-center sm:text-left">
             <span>Projeto Educativo Outubro Rosa</span>
-            <HeartStraight size={14} weight="fill" className="text-pink-200" />
+            <HeartStraight size={14} weight="fill" className="text-pink-200 shrink-0" />
             <span>Prevenção, Conscientização e Cuidado com a Mulher</span>
           </p>
-          <p className="font-mono-num text-[11px]">
-            Outubro Rosa • Juntas pela Vida
+          <p className="flex items-center gap-1.5 text-[11px] text-pink-100/95">
+            <span>Feito com amor por</span>
+            <HeartStraight size={12} weight="fill" className="text-pink-200 shrink-0" />
+            <a
+              href="https://www.instagram.com/leonardoteodoro.of/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display font-bold tracking-wide text-white underline decoration-pink-200/70 underline-offset-4 hover:text-pink-100 transition-colors"
+            >
+              LEONARDO TEODORO
+            </a>
           </p>
         </div>
       </div>
