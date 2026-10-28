@@ -12,14 +12,11 @@ const SelfExamGuideSection = React.lazy(
 const MythsTruthsSection = React.lazy(
   () => import('./components/MythsTruthsSection')
 );
-const ParticipantsSection = React.lazy(
-  () => import('./components/ParticipantsSection')
-);
 const Footer = React.lazy(() => import('./components/Footer'));
 
 const SectionSkeleton: React.FC = () => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div className="h-64 rounded-[2.5rem] bg-rose-100/50 animate-pulse border border-rose-200/50" />
+    <div className="h-64 rounded-[2.5rem] bg-pink-100/50 animate-pulse border border-pink-200/50" />
   </div>
 );
 
@@ -49,10 +46,6 @@ export const App: React.FC = () => {
 
         <Suspense fallback={<SectionSkeleton />}>
           <MythsTruthsSection />
-        </Suspense>
-
-        <Suspense fallback={<SectionSkeleton />}>
-          <ParticipantsSection />
         </Suspense>
       </main>
 

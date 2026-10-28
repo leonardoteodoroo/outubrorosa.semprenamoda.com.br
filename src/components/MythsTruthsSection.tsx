@@ -36,7 +36,7 @@ export const MythsTruthsSection: React.FC = () => {
   return (
     <section
       id="mitos"
-      className="py-10 sm:py-16 lg:py-22 relative bg-gradient-to-b from-[#fdf8f9] via-rose-50/45 to-[#fdf8f9]"
+      className="py-10 sm:py-16 lg:py-22 relative bg-gradient-to-b from-[#fdf8f9] via-pink-50/45 to-[#fdf8f9]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho com contador interativo */}
@@ -48,7 +48,7 @@ export const MythsTruthsSection: React.FC = () => {
           className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-10"
         >
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-[11px] font-semibold tracking-wide uppercase">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-[11px] font-semibold tracking-wide uppercase">
               <Question size={14} weight="duotone" />
               Informação Baseada em Evidências
             </span>
@@ -58,12 +58,12 @@ export const MythsTruthsSection: React.FC = () => {
             <p className="mt-2 text-xs sm:text-base text-zinc-600 leading-relaxed">
               Toque em <strong className="text-zinc-900">É Mito</strong> ou{' '}
               <strong className="text-zinc-900">É Verdade</strong> em cada
-              afirmação para revelar o esclarecimento segundo o INCA e o Ministério da Saúde.
+              afirmação para revelar o esclarecimento científico sobre o câncer de mama.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5">
-            <div className="px-3.5 py-2 rounded-2xl bg-rose-50 border border-rose-200/70 font-mono-num text-xs font-semibold text-rose-900">
+            <div className="px-3.5 py-2 rounded-2xl bg-pink-50 border border-pink-200/70 font-mono-num text-xs font-semibold text-pink-800">
               Explorados: {revealedCount} / {MYTHS_AND_TRUTHS.length}
             </div>
 
@@ -71,7 +71,7 @@ export const MythsTruthsSection: React.FC = () => {
               <button
                 type="button"
                 onClick={handleRevealAll}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-rose-700 hover:bg-rose-800 text-white text-xs font-semibold transition-all active:scale-95"
+                className="btn-metallic-pink inline-flex items-center gap-1.5 px-3.5 py-2 rounded-2xl text-xs font-semibold transition-all active:scale-95"
               >
                 <Sparkle size={14} weight="fill" />
                 <span>Revelar Respostas</span>
@@ -113,13 +113,13 @@ export const MythsTruthsSection: React.FC = () => {
                 }}
                 className={`rounded-3xl sm:rounded-[2rem] border p-4 sm:p-6 transition-colors flex flex-col justify-between ${
                   isRevealed
-                    ? 'bg-white border-rose-300 shadow-[0_16px_32px_-14px_rgba(136,19,55,0.08)]'
-                    : 'bg-white/90 hover:bg-white border-rose-200/70 shadow-2xs'
+                    ? 'bg-white border-pink-300 shadow-[0_16px_32px_-14px_rgba(194,50,120,0.08)]'
+                    : 'bg-white/90 hover:bg-white border-pink-200/70 shadow-2xs'
                 } ${idx === MYTHS_AND_TRUTHS.length - 1 ? 'md:col-span-2' : ''}`}
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-2.5">
-                    <span className="font-mono-num text-[10px] sm:text-xs font-bold text-rose-700 bg-rose-50 border border-rose-200/60 px-2.5 py-0.5 rounded-full">
+                    <span className="font-mono-num text-[10px] sm:text-xs font-bold text-pink-700 bg-pink-50 border border-pink-200/70 px-2.5 py-0.5 rounded-full">
                       0{idx + 1} • {item.tag}
                     </span>
 
@@ -128,7 +128,7 @@ export const MythsTruthsSection: React.FC = () => {
                         className={`inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full ${
                           isCorrect
                             ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
-                            : 'bg-rose-100 text-rose-800 border border-rose-200'
+                            : 'bg-pink-100 text-pink-800 border border-pink-200'
                         }`}
                       >
                         <CheckCircle size={13} weight="fill" />
@@ -155,7 +155,7 @@ export const MythsTruthsSection: React.FC = () => {
                         <button
                           type="button"
                           onClick={() => handleSelect(item.id, 'myth')}
-                          className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-rose-50 hover:bg-rose-700 hover:text-white text-rose-900 border border-rose-200 font-semibold text-xs sm:text-sm transition-all active:scale-[0.98]"
+                          className="btn-metallic-pink inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-semibold text-xs sm:text-sm transition-all active:scale-[0.98]"
                         >
                           <XCircle size={16} weight="duotone" />
                           <span>É Mito</span>
@@ -163,7 +163,7 @@ export const MythsTruthsSection: React.FC = () => {
                         <button
                           type="button"
                           onClick={() => handleSelect(item.id, 'truth')}
-                          className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-zinc-50 hover:bg-zinc-900 hover:text-white text-zinc-800 border border-zinc-200 font-semibold text-xs sm:text-sm transition-all active:scale-[0.98]"
+                          className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-pink-50 hover:bg-pink-100 text-pink-900 border border-pink-200 font-semibold text-xs sm:text-sm transition-all active:scale-[0.98]"
                         >
                           <CheckCircle size={16} weight="duotone" />
                           <span>É Verdade</span>
@@ -175,9 +175,9 @@ export const MythsTruthsSection: React.FC = () => {
                         initial={{ opacity: 0, y: 6 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ type: 'spring', duration: 0.35, bounce: 0 }}
-                        className="p-3.5 sm:p-4 rounded-2xl bg-rose-50/85 border border-rose-200/80"
+                        className="p-3.5 sm:p-4 rounded-2xl bg-pink-50/85 border border-pink-200/80"
                       >
-                        <span className="font-display font-bold text-xs sm:text-sm text-rose-800 block mb-1">
+                        <span className="font-display font-bold text-xs sm:text-sm text-pink-700 block mb-1">
                           {item.verdictLabel}
                         </span>
                         <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">

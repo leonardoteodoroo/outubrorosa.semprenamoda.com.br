@@ -8,10 +8,9 @@ import {
 } from '@phosphor-icons/react';
 
 const NAV_ITEMS = [
-  { label: 'Prevenção & SUS', href: '#prevencao' },
+  { label: 'Prevenção & Mamografia', href: '#prevencao' },
   { label: 'Autoexame', href: '#autoexame' },
   { label: 'Mito ou Verdade', href: '#mitos' },
-  { label: 'Especialistas', href: '#especialistas' },
 ];
 
 export const Navbar: React.FC = () => {
@@ -28,7 +27,7 @@ export const Navbar: React.FC = () => {
             href="#topo"
             className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none"
           >
-            <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-rose-50 border border-rose-200/80 flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
+            <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-pink-50 border border-pink-200/80 flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
               <img
                 src="/images/campanha/laco-rosa.png"
                 alt=""
@@ -39,10 +38,10 @@ export const Navbar: React.FC = () => {
             </span>
             <div className="flex flex-col">
               <span className="font-display font-bold text-sm sm:text-base tracking-tight text-zinc-900 leading-none">
-                Outubro <span className="text-rose-600">Rosa</span>
+                Outubro <span className="text-metallic-pink">Rosa</span>
               </span>
               <span className="text-[10px] sm:text-[11px] font-medium text-zinc-500 tracking-wide mt-0.5">
-                Campanha Educativa & Saúde da Mulher
+                Conscientização & Saúde da Mulher
               </span>
             </div>
           </a>
@@ -52,7 +51,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-zinc-700 hover:text-rose-700 hover:bg-rose-50/90 transition-colors"
+                className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-zinc-700 hover:text-pink-700 hover:bg-pink-50/90 transition-colors"
               >
                 {item.label}
               </a>
@@ -62,7 +61,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center">
             <a
               href="#autoexame"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-700 hover:bg-rose-800 active:scale-[0.98] text-white text-xs font-semibold tracking-wide transition-all shadow-xs"
+              className="btn-metallic-pink inline-flex items-center gap-2 px-4 py-2 rounded-full active:scale-[0.98] text-xs font-semibold tracking-wide transition-all"
             >
               <HeartStraight size={14} weight="fill" />
               <span>Guia de Autocuidado</span>
@@ -75,7 +74,7 @@ export const Navbar: React.FC = () => {
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-expanded={mobileMenuOpen}
             aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
-            className="md:hidden w-9 h-9 rounded-full bg-rose-50 text-rose-800 flex items-center justify-center border border-rose-200/70 active:scale-95 transition-transform"
+            className="md:hidden w-9 h-9 rounded-full bg-pink-50 text-pink-700 flex items-center justify-center border border-pink-200/80 active:scale-95 transition-transform"
           >
             {mobileMenuOpen ? <X size={18} weight="bold" /> : <List size={18} weight="bold" />}
           </button>
@@ -90,23 +89,23 @@ export const Navbar: React.FC = () => {
               transition={{ type: 'spring', duration: 0.3, bounce: 0 }}
               className="md:hidden mt-2 rounded-3xl liquid-glass p-3 shadow-xl"
             >
-              <div className="grid grid-cols-2 gap-1.5">
+              <div className="grid grid-cols-1 gap-1.5">
                 {NAV_ITEMS.map((item) => (
                   <a
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-3 py-2.5 rounded-2xl text-xs font-semibold text-zinc-800 bg-white/70 hover:bg-rose-50 hover:text-rose-700 transition-colors flex items-center justify-between border border-rose-100/80"
+                    className="px-3.5 py-2.5 rounded-2xl text-xs font-semibold text-zinc-800 bg-white/80 hover:bg-pink-50 hover:text-pink-700 transition-colors flex items-center justify-between border border-pink-100/80"
                   >
                     <span>{item.label}</span>
-                    <ArrowUpRight size={14} className="text-rose-600 shrink-0" />
+                    <ArrowUpRight size={14} className="text-pink-500 shrink-0" />
                   </a>
                 ))}
               </div>
               <a
                 href="#autoexame"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 w-full py-2.5 rounded-2xl bg-rose-700 text-white text-center text-xs font-semibold flex items-center justify-center gap-2"
+                className="btn-metallic-pink mt-2 w-full py-2.5 rounded-2xl text-center text-xs font-semibold flex items-center justify-center gap-2"
               >
                 <HeartStraight size={14} weight="fill" />
                 <span>Passo a Passo do Autoexame</span>
